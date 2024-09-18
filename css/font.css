@@ -1,0 +1,33 @@
+@font-face {
+    font-family: Shabmath;
+    src: url('fonts/webfonts/Shabnam-FD.woff2') format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Shabmath;
+    src: url('fonts/webfonts/Shabnam-Bold-FD.woff2') format('woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Shabmath;
+    src: url('fonts/webfonts/Shabnam-Thin-FD.woff2') format('woff2');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Shabmath;
+    url('fonts/webfonts/Shabnam-Light-FD.woff2') format('woff2'),
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Shabmath;
+    src: url('fonts/webfonts/Shabnam-Medium-FD.woff2') format('woff2');
+    font-weight: 500;
+}
+
+* {
+    font-family: Shabmath, serif;
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ابزارهای مدرسه</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/font.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="container text-center p-4 bg-secondary-subtle">
+        <h1 >ابزارهای مفاهیم مقطع دبستان</h1>
+    </div>
+    <div class="container text-center">
+        <div class="row p-3 bg-primary-subtle">
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button onclick="location.href='https://ali.id.ir';" type="button" class="fw-bold btn btn-danger">خانه</button>
+                <button onclick="location.href='https://t.me/jeunehomme';" type="button" class="fw-bold btn btn-warning">تلگرام</button>
+                <button onclick="location.href='tel:+989334272616';" type="button" class="fw-bold btn btn-success">تماس</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-2 bg-body-secondary ">
+        <br>
+        <div class="col">
+            <h4>محور اعداد</h4>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <label for="drawAxisStartNumber" class="">از عدد:</label>
+                <input type="number" class="form-control" id="drawAxisStartNumber" value="0" placeholder="عدد شروع محور">
+            </div>
+            <div class="col">
+                <label for="drawAxisEndNumber" class="">تا عدد:</label>
+                <input type="number" class="form-control" id="drawAxisEndNumber" value="5"  placeholder="عدد پایان محور">
+            </div>
+            <div class="col">
+                <label class="">شماره گذاری:</label>
+                <div class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="axisNumbering" id="showAxisNumbering" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="showAxisNumbering">آره</label>
+                    <input type="radio" class="btn-check" name="axisNumbering" id="doNotShowAxisNumbering" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="doNotShowAxisNumbering">نه</label>
+                </div>
+            </div>
+            <div class="col">
+                <label class="w-100"></label>
+                <button onclick="createAxisWindow()" type="button" class="btn btn-outline-secondary w-100">ساخت</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-2 bg-body-secondary ">
+        <br>
+        <div class="col">
+            <h4>محور مختصات</h4>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <label for="coordinateMaxX" class="">طول:</label>
+                <input min="1" type="number" class="form-control" id="coordinateMaxX" value="5" placeholder="عدد شروع محور">
+            </div>
+            <div class="col">
+                <label for="coordinateMaxY" class="">عرض:</label>
+                <input min="1" type="number" class="form-control" id="coordinateMaxY" value="5"  placeholder="عدد پایان محور">
+            </div>
+            <div class="col">
+                <label class="">شماره گذاری:</label>
+                <div class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="coordinateNumbering" id="showCoordinateNumbering" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="showCoordinateNumbering">آره</label>
+                    <input type="radio" class="btn-check" name="coordinateNumbering" id="doNotshowCoordinateNumbering" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="doNotshowCoordinateNumbering">نه</label>
+                </div>
+            </div>
+            <div class="col">
+                <label class="w-100"></label>
+                <button onclick="drawCoordinate()" type="button" class="btn btn-outline-secondary w-100">ساخت</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-2 bg-body-secondary ">
+        <br>
+        <div class="col">
+            <h4>دایره</h4>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <label for="drawCircleSegments" class="">تقسیم به قسمت‌های مساوی:</label>
+                <input min="1" type="number" class="form-control" id="drawCircleSegments" value="1" placeholder="تعداد قسمت‌های دایره">
+            </div>
+            <div class="col">
+                <label class="">نمایش کیک:</label>
+                <div class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="drawCircleSegmentsBgRadio" id="drawCircleSegmentsShowCakeBG" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="drawCircleSegmentsShowCakeBG">آره</label>
+                    <input type="radio" class="btn-check" name="drawCircleSegmentsBgRadio" id="drawCircleSegmentsDoNotShowCakeBG" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="drawCircleSegmentsDoNotShowCakeBG">نه</label>
+                </div>
+            </div>
+            <div class="col">
+                <label class="w-100"></label>
+                <button onclick="drawCircle(4)" type="button" class="btn btn-outline-secondary w-100">ساخت</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container p-2 bg-danger-subtle">
+        <p>
+            این صفحه درحال توسعه است، درصورتی که ایده‌ای دارید یا نیاز به قابلیت جدیدی
+            را حس می‌کنید، کافیست با ما در میان بگذارید.
+            🤖
+            طراحی شده در اداره آموزش و پرورش شهرستان جویبار.
+        </p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="tools/main.js"></script>
+<script src="tools/drawCircle.js"></script>
+<script src="tools/drawAxis.js"></script>
+<script src="tools/drawCoordinate.js"></script>
+</body>
+</html>
